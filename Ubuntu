@@ -1,0 +1,3 @@
+Windows Sub system 
+  1. START -> wsl -d Ubuntu
+  2. DOWN -> wsl --shutdown
