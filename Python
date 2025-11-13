@@ -1,0 +1,3 @@
+Create Environment -> python -m venv venv
+Activate Environment -> ./venv/Scripts/activate
+Install requiremented -> Pip install -r .\req.txt
