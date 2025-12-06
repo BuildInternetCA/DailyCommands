@@ -1,0 +1,3 @@
+#LATEST LOGS 
+journalctl -u BuildInternetAdmin.service -f
+
