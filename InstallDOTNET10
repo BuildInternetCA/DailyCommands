@@ -1,0 +1,15 @@
+wget https://packages.microsoft.com/config/ubuntu/$(lsb_release -rs)/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+sudo apt install -y dotnet-sdk-10.0
+sudo apt update
+sudo apt install -y dotnet-sdk-10.0
+sudo apt remove dotnet*
+cd /opt/
+sudo wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+sudo chmod +x dotnet-install.sh
+sudo ./dotnet-install.sh --channel 10.0 --install-dir ./dotnet-sdk
+sudo rm /usr/bin/dotnet
+sudo ln -s /opt/dotnet-sdk/dotnet /usr/bin/dotnet
+dotnet
+dotnet --info
