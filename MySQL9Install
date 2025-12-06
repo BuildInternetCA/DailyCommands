@@ -1,0 +1,22 @@
+# CHECK VERSION
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
+sudo apt-get update
+sudo systemctl stop mysql
+sudo apt purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+sudo rm -rf /etc/mysql /var/lib/mysql /var/log/mysql
+clear
+mysql
+mysql --version
+sudo apt purge mysql-server mysql-client mysql-common
+sudo apt autoremove
+sudo mv -iv /var/lib/mysql /var/tmp/mysql-backup
+sudo rm -rf /var/lib/mysql*
+sudo apt update
+mysql
+sudo dpkg -i mysql-apt-config_0.8.36-1_all.deb
+sudo apt update
+sudo apt install mysql-server
+mysql
+mysql --version
+mysqld --initialize
