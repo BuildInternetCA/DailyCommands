@@ -1,0 +1,19 @@
+sudo nano /etc/systemd/system/myapp.service
+
+
+[Unit]
+Description=My .NET Application Service
+After=network.target
+
+[Service]
+WorkingDirectory=/path/to/your/published/app # e.g., /var/www/myapp/
+ExecStart=/path/to/your/published/app/YourAppExecutable # e.g., /var/www/myapp/YourAppExecutable
+Restart=always # Or on-failure, no, etc.
+RestartSec=10 # Wait 10 seconds before restarting
+User=www-data # Or another non-root user
+Group=www-data # Or another non-root group
+Environment=ASPNETCORE_ENVIRONMENT=Production
+# Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false # Optional: Disable telemetry
+
+[Install]
+WantedBy=multi-user.target
