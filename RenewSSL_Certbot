@@ -1,1 +1,1 @@
-
+sudo certbot --nginx -d buildinternet.ca -d www.buildinternet.ca
