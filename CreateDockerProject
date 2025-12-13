@@ -1,0 +1,7 @@
+Install docker to system 
+move to project directory 
+
+docker init
+
+docker compose up --build
+
