@@ -5,3 +5,5 @@ docker init
 
 docker compose up --build
 
+-- TEAM CITY DOOCKER PERMISSON
+sudo usermod -aG docker teamcity
