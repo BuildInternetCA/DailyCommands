@@ -19,6 +19,7 @@ SyslogIdentifier=dotnet-example
 User=www-data
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_NOLOGO=true
+Environment=ASPNETCORE_HTTP_PORTS=5000
 
 [Install]
 WantedBy=multi-user.target
